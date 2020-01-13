@@ -1,8 +1,19 @@
 {{ define "main" -}}
 <div class="post">
-  <h1>{{ .Title }}</h1>
-  <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }} class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
-  {{ .Content }}
+  <h1 class="content-title">{{ .Title }}</h1>
+  <div class="post-meta post-date">
+    <time style="display: inline-block" datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }}> {{ .Date.Format "2006-01-02" }} </time>
+    {{ with .Params.tags }}
+    <div class="tags" style="display: inline-block; margin-left: 10px">
+      {{ range . }}
+      <a style="margin-left: 5px" href="{{ "tags" | absURL }}/{{ . | urlize }}">#{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  <div class="post-content" style="margin-top: 20px">
+    {{ .Content }}
+  </div>
 </div>
 
 {{ if .Site.DisqusShortname -}}
