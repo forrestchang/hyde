@@ -24,6 +24,19 @@
  * Themes
  */
 
+ .post-content a {
+   color: #ffdb00;
+ }
+
+ .post-tags a {
+   color: #ffdb00;
+ }
+
+ .post-content a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid #ffdb00;
+ }
+
 
 /*
  * Global resets
@@ -89,11 +102,10 @@ html {
 
 .second-title {
   display: block;
-  font-size: 3rem;
-  box-shadow: -15px 0px 0px #ffdb00, 19px 0px 0px #ffdb00;
-  background-color: #ffdb00;
+  /* box-shadow: -15px 0px 0px #ffdb00, 19px 0px 0px #ffdb00; */
+  /* background-color: #ffdb00; */
+  border-bottom: 15px solid #ffdb00;
   margin-bottom: 10px;
-  padding-bottom: 2px;
 }
 
 /* Sidebar nav */

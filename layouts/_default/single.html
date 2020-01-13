@@ -4,7 +4,7 @@
   <div class="post-meta post-date">
     <time style="display: inline-block" datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }}> {{ .Date.Format "2006-01-02" }} </time>
     {{ with .Params.tags }}
-    <div class="tags" style="display: inline-block; margin-left: 10px">
+    <div class="post-tags" style="display: inline-block; margin-left: 10px">
       {{ range . }}
       <a style="margin-left: 5px" href="{{ "tags" | absURL }}/{{ . | urlize }}">#{{ . }}</a>
       {{ end }}
